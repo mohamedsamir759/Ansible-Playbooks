@@ -1,0 +1,11 @@
+- name: LAMP Stack Deployment
+  hosts: webserver
+  become: true
+  vars_files:
+    - var.yml
+  
+  roles:
+    - apache
+    - mysql
+    - php
+    - firewall
